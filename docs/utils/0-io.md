@@ -16,6 +16,8 @@
     param = 123
     data = template.render(param=param)
     ```
+    
+    [Jinja documentation](https://jinja.palletsprojects.com/)
 
 === "R"
     ```R
