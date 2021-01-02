@@ -24,3 +24,19 @@
     param <- 123
     data <- readr::read_file("folder/file") %>% glue(., param=param)
     ```
+
+## Read many data files
+
+=== "Python"
+```python
+import glob
+import json
+
+files = glob.glob("./*.json")  # get all json files in currenty directory
+
+def read_file(filepath: str) -> dict:
+    with open(filepath, "r") as fopen:
+        return json.load(fopen)
+
+data = [read_file(item) for item in files]
+```
