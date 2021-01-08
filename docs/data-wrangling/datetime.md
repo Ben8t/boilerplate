@@ -1,6 +1,6 @@
 # Date & Time
 
-## Get formatted today time
+## Get formatted today date
 
 ```python
 import datetime
