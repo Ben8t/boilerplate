@@ -33,4 +33,9 @@ Quickly add AWS credentials in volume.
 -v /Users/$USER/.aws/credentials:/root/.aws/credentials
 ```
 
+Add environment file.
+```bash
+--env-file .env
+```
+
 
