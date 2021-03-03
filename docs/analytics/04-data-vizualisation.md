@@ -25,3 +25,9 @@ custom_theme <- function(){
   )
 }
 ```
+
+## Save plot
+
+```R
+ggsave(plot, bg="white", width = 30, height = 20, units = "cm", dpi = 300)
+```
