@@ -31,3 +31,15 @@ custom_theme <- function(){
 ```R
 ggsave(plot, bg="white", width = 30, height = 20, units = "cm", dpi = 300)
 ```
+
+## Basic Plotnine (Python)
+
+```python
+from plotnine import ggplot, geom_point, geom_line, labs
+
+(
+    ggplot(data, aes(x="x", y="y", color="color"))
+    + geom_line()
+    + labs(x="x_label")
+)
+```
