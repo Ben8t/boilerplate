@@ -32,3 +32,4 @@ parsed_data = (
     data
     .assign(date=lambda x: pd.to_datetime(x["str_date"], format="%Y%m%d", errors="ignore"))
 )
+```
