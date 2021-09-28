@@ -19,3 +19,16 @@ print datetime_obj
 ```
 
 :warning: Can be slow...
+
+## Convert Pandas string to datetime
+
+```python
+import pandas as pd
+import datetime
+
+data = pd.DataFrame([{"str_date": "20210101"}, {"str_date": "20210201"}])
+
+parsed_data = (
+    data
+    .assign(date=lambda x: pd.to_datetime(x["str_date"], format="%Y%m%d", errors="ignore"))
+)
