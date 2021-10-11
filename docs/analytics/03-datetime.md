@@ -33,3 +33,17 @@ parsed_data = (
     .assign(date=lambda x: pd.to_datetime(x["str_date"], format="%Y%m%d", errors="ignore"))
 )
 ```
+
+## Manipulate date with [Operation](https://ben8t.github.io/operation/03-operation-list.html)
+
+Remove 120 days from a given date :
+
+```bash
+operation date -d 2021 01 01 0 0 120 --sub
+```
+
+Add 2 years, 1 month and 15 days to a given date
+
+```bash
+operation date -d 2021 01 01 2 1 15 --add
+```
