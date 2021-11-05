@@ -28,3 +28,14 @@ parse.add_argument("--another_flag", type="integer")
 args = parser.parse_args()
 ```
 
+## Fake Pandas Dataframe
+
+```python
+import numpy as np
+import pandas as pd
+import string
+row_num = 10000
+col_num = 5
+col_names = list(string.ascii_uppercase)[0:col_num]
+df = pd.DataFrame(np.random.randint(0,row_num,size=(row_num, col_num)), columns=col_names)
+```
