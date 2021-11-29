@@ -13,3 +13,13 @@ def fake_data():
 def test_data_length(fake_data):
     assert len(fake_data) == 5
 ```
+
+## Mocker
+
+```python
+def test_with_mock(mocker):
+    mocker.patch.object(<object>, "<object_method>", auto_spec=True)
+    handler = <object>(params)
+
+    assert handler...
+```
