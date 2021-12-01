@@ -47,3 +47,12 @@ Add 2 years, 1 month and 15 days to a given date
 ```bash
 operation date -d 2021 01 01 2 1 15 --add
 ```
+
+
+## Create range of date
+
+```python
+import pandas as pd
+
+pd.date_range('2021-02-01','2021-12-01', freq='MS').strftime("%Y%m%d").tolist()
+```
