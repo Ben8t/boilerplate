@@ -1,5 +1,25 @@
 # Transform
 
+
+## Pandas group-by
+
+```python
+import pandas as pd
+
+data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
+
+transformed_data = (
+    data
+    .groupby(["species"])
+    .agg(
+        mean_sepal_length=("sepal_length", "mean"),
+        mean_sepal_width=("sepal_width", "mean"),
+        max_petal_length=("petal_length", "max")
+    )
+    .reset_index()
+)
+```
+
 ## Pandas JSON Normalize
 
 ```python
