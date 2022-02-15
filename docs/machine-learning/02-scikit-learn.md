@@ -48,7 +48,7 @@ def compute_classification_metrics(y_true, y_pred):
     return {
         "accuracy": accuracy_score(y_true, y_pred),
         "precision": precision_score(y_true, y_pred),
-        "recall_score": recall_score(y_true, y_pred)
+        "recall": recall_score(y_true, y_pred)
     }
 ```
 
@@ -59,7 +59,7 @@ y_pred = [0, 0, 1, 0, 0]
 classification_metrics = compute_classification_metrics(y_true, y_pred)
 accuracy = classification_metrics.get("accuracy")
 precision = classification_metrics.get("precision")
-recall = classification_metrics.get("recall_score")
+recall = classification_metrics.get("recall")
 ```
 
 ## Data Preprocessing Pipeline
