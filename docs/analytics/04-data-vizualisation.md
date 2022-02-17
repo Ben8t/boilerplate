@@ -43,3 +43,25 @@ from plotnine import ggplot, geom_point, geom_line, labs
     + labs(x="x_label")
 )
 ```
+
+## Plot distribution differences between two value
+
+```python
+import numpy as np
+import pandas as pd
+from plotnine import ggplot, aes, labs, aes, geom_histogram, theme_minimal
+
+data = pd.DataFrame({"column_a":np.random.randint(0, 100, 5000), "column_b":np.random.randint(0, 100, 5000)})
+
+melted_data = (
+    data
+    .melt(id_vars=[], value_vars=["column_a", "column_b"])
+)
+
+(
+    ggplot(melted_data, aes(x="value", fill="variable"))
+        + geom_histogram(binwidth=10, position="dodge", color="white")
+        + labs(x="Value", y="Count")
+        + theme_minimal()
+)
+```
