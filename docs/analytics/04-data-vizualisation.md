@@ -51,7 +51,7 @@ ggsave(plot, "plot.png")
 ```python
 import numpy as np
 import pandas as pd
-from plotnine import ggplot, aes, labs, aes, geom_histogram, theme_minimal, scale_fill_manual
+from plotnine import ggplot, aes, labs, aes, geom_histogram, theme_minimal, scale_fill_manual, scale_x_continuous
 
 data = pd.DataFrame({"column_a":np.random.randint(0, 100, 5000), "column_b":np.random.randint(0, 100, 5000)})
 
@@ -63,8 +63,9 @@ melted_data = (
 (
     ggplot(melted_data, aes(x="value", fill="variable"))
         + geom_histogram(binwidth=10, position="dodge", color="white")
-        + scale_fill_manual(values=['#27a3e0', '#0740af'])
-        + labs(x="Value", y="Count")
+        + scale_fill_manual(values=['#27a3e0', '#0740af'], labels=["A", "B"])
+        + scale_x_continuous(breaks=[0, 50, 100], expand=(0, 0))
+        + labs(x="Value", y="Count", fill="Two variables")
         + theme_minimal()
 )
 ```
