@@ -50,7 +50,7 @@ parsed_data = (
 )
 ```
 
-## Manipulate date with [Operation](https://ben8t.github.io/operation/03-operation-list.html)
+## Manipulate date with [Operation](https://ben8t.github.io/operation/03-operation-list)
 
 Remove 120 days from a given date :
 
