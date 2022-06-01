@@ -11,6 +11,22 @@ formatted_date = date.strftime("%Y%m%d")
 
 ## Parse date string
 
+If your string is already in iso-format (`%Y-%m-%d`)
+
+```python
+from datetime import date
+date_variable = date.fromisoformat('2019-12-04')
+```
+
+if you have other format
+
+```python
+from datetime import datetime
+new_date = datetime.strptime('20190109', '%Y%m%d')
+```
+
+or
+ 
 ```python
 from dateutil import parser
 datetime_obj = parser.parse('2018-02-06T13:12:18.1278015Z')
